@@ -3,7 +3,106 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Earthbound Forms | Outdoor Sculpture Artist</title>
+		<title>Foraged Studios | Outdoor Sculpture Artist</title>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "Person",
+						"@id": "#artist",
+						"name": "Foraged Studios",
+						"jobTitle": "Outdoor Sculpture Artist",
+						"description": "Outdoor sculpture artist creating site-specific installations from found natural materials.",
+						"email": "mailto:hello@foragedstudios.com",
+						"worksFor": {
+							"@type": "Organization",
+							"name": "Foraged Studios"
+						},
+						"creator": [
+							{
+								"@id": "#wind-ladder"
+							},
+							{
+								"@id": "#tide-nest"
+							},
+							{
+								"@id": "#root-halo"
+							},
+							{
+								"@id": "#stone-current"
+							}
+						]
+					},
+					{
+						"@type": "CollectionPage",
+						"@id": "#gallery-page",
+						"name": "Earthbound Forms Gallery",
+						"about": {
+							"@id": "#artist"
+						},
+						"hasPart": [
+							{
+								"@id": "#wind-ladder"
+							},
+							{
+								"@id": "#tide-nest"
+							},
+							{
+								"@id": "#root-halo"
+							},
+							{
+								"@id": "#stone-current"
+							}
+						]
+					},
+					{
+						"@type": "VisualArtwork",
+						"@id": "#wind-ladder",
+						"name": "Wind Ladder",
+						"artform": "Outdoor sculpture",
+						"material": ["Willow twigs", "Reed knots"],
+						"description": "Willow twigs and reed knots in open meadow grass.",
+						"creator": {
+							"@id": "#artist"
+						}
+					},
+					{
+						"@type": "VisualArtwork",
+						"@id": "#tide-nest",
+						"name": "Tide Nest",
+						"artform": "Outdoor sculpture",
+						"material": ["Driftwood", "Shells"],
+						"description": "Driftwood and shells arranged at low tide.",
+						"creator": {
+							"@id": "#artist"
+						}
+					},
+					{
+						"@type": "VisualArtwork",
+						"@id": "#root-halo",
+						"name": "Root Halo",
+						"artform": "Outdoor sculpture",
+						"material": ["Roots", "Fallen leaves"],
+						"description": "Interlocked roots and fallen leaves in oak woodland.",
+						"creator": {
+							"@id": "#artist"
+						}
+					},
+					{
+						"@type": "VisualArtwork",
+						"@id": "#stone-current",
+						"name": "Stone Current",
+						"artform": "Outdoor sculpture",
+						"material": ["River stones"],
+						"description": "River stones laid in a moving line along shallow water.",
+						"creator": {
+							"@id": "#artist"
+						}
+					}
+				]
+			}
+		</script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -13,99 +112,151 @@
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<div class="texture" aria-hidden="true"></div>
+		<aside class="texture" aria-hidden="true"></aside>
 
 		<header class="site-header">
-			<div class="shell">
+			<section class="shell" aria-label="Site navigation container">
 				<nav class="nav" aria-label="Primary">
-					<div class="logo">Earthbound Forms</div>
-					<div class="nav-links">
-						<a href="#gallery">Gallery</a>
-						<a href="#about-me">About Me</a>
-						<a href="#contact">Contact</a>
-						<a href="#upcoming-exhibitions">Upcoming Exhibitions</a>
-					</div>
+					<p class="logo">Foraged Studios</p>
+					<ul class="nav-links">
+						<li><a href="#gallery">Gallery</a></li>
+						<li><a href="#about-me">About Me</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#upcoming-exhibitions">Exhibitions</a></li>
+					</ul>
 				</nav>
-			</div>
+			</section>
 		</header>
 
 		<main class="shell">
 			<section id="about-me" class="section full-height">
-				<div class="section-inner hero-layout">
-					<div class="hero-copy">
-						<div class="kicker">About Me</div>
-						<h1>Temporary monuments built from twigs, leaves, stone, and weather.</h1>
+				<article class="section-inner hero-layout">
+					<header class="hero-copy">
+						<p class="kicker">Welcome </p>
+						<h1>Monuments crafted from locally found natural materials</h1>
 						<p>
-							I am an outdoor sculpture artist creating site-specific works from
-							found natural materials. Every installation is built by hand,
-							documented in natural light, and left to return gently to the
-							landscape.
+							I am an outdoor sculpture artist weaving fallen leaves, interlocking 
+							fractured twigs, and balancing river stones using only gravity and water. 
+							Every installation is built by hand,documented in natural light, and left 
+							to return gently to the landscape.
 						</p>
-						<div class="cta-row">
+						<p class="cta-row">
 							<a class="btn btn-main" href="#gallery">View Gallery</a>
 							<a class="btn btn-ghost" href="#contact">Book a Commission</a>
-						</div>
-					</div>
+						</p>
+					</header>
 
-					<div class="hero-art" aria-hidden="true">
-						<div class="shape shape-a"></div>
-						<div class="shape shape-b"></div>
-						<div class="shape shape-c"></div>
-						<div class="badge">
+					<figure class="hero-art" aria-hidden="true">
+						<span class="shape shape-a"></span>
+						<span class="shape shape-b"></span>
+						<span class="shape shape-c"></span>
+						<figcaption class="badge">
 							Built on riverbanks, forest floors, and coastal paths.
-						</div>
-					</div>
-				</div>
+						</figcaption>
+					</figure>
+				</article>
 			</section>
 
 			<section id="gallery" class="section full-height">
-				<div class="section-inner">
-					<div class="section-head">
-						<div>
-							<div class="kicker">Gallery</div>
+				<article class="section-inner">
+					<header class="section-head">
+						<section>
+							<p class="kicker">Gallery</p>
 							<h2>Selected outdoor works assembled from natural elements.</h2>
-						</div>
-					</div>
+						</section>
+					</header>
 
-					<div class="gallery">
+					<section class="gallery" aria-label="Sculpture gallery">
 						<article class="piece piece-1">
-							<div>
+							<a
+								class="piece-image-link"
+								href="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Open full-size image of Wind Ladder"
+							>
+								<img
+									src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80"
+									alt="Twig-based sculpture installed in a meadow"
+									loading="lazy"
+								/>
+							</a>
+							<header class="piece-copy">
 								<strong>Wind Ladder</strong>
 								<p>Willow twigs and reed knots in open meadow grass.</p>
-							</div>
+							</header>
 						</article>
 						<article class="piece piece-2">
-							<div>
+							<a
+								class="piece-image-link"
+								href="https://images.unsplash.com/photo-1470163395405-d2b80e7450ed?auto=format&fit=crop&w=1600&q=80"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Open full-size image of Tide Nest"
+							>
+								<img
+									src="https://images.unsplash.com/photo-1470163395405-d2b80e7450ed?auto=format&fit=crop&w=1200&q=80"
+									alt="Driftwood sculpture near the shoreline"
+									loading="lazy"
+								/>
+							</a>
+							<header class="piece-copy">
 								<strong>Tide Nest</strong>
 								<p>Driftwood and shells arranged at low tide.</p>
-							</div>
+							</header>
 						</article>
 						<article class="piece piece-3">
-							<div>
+							<a
+								class="piece-image-link"
+								href="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1600&q=80"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Open full-size image of Root Halo"
+							>
+								<img
+									src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80"
+									alt="Natural sculpture made from roots in a woodland"
+									loading="lazy"
+								/>
+							</a>
+							<header class="piece-copy">
 								<strong>Root Halo</strong>
 								<p>Interlocked roots and fallen leaves in oak woodland.</p>
-							</div>
+							</header>
 						</article>
 						<article class="piece piece-4">
-							<div>
+							<a
+								class="piece-image-link"
+								href="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1600&q=80"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Open full-size image of Stone Current"
+							>
+								<img
+									src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1200&q=80"
+									alt="Stone arrangement sculpture along shallow water"
+									loading="lazy"
+								/>
+							</a>
+							<header class="piece-copy">
 								<strong>Stone Current</strong>
 								<p>River stones laid in a moving line along shallow water.</p>
-							</div>
+							</header>
 						</article>
-					</div>
-				</div>
+					</section>
+				</article>
 			</section>
 
 			<section id="upcoming-exhibitions" class="section full-height">
-				<div class="section-inner">
-					<div class="section-head">
-						<div>
-							<div class="kicker">Upcoming Exhibitions</div>
+				<article class="section-inner">
+					<header class="section-head">
+						<section>
+							<p class="kicker">Upcoming Exhibitions</p>
 							<h2>Next places to experience these works in person.</h2>
-						</div>
-					</div>
+						</section>
+					</header>
 
-					<div class="about-grid">
+					<section class="about-grid" aria-label="Upcoming exhibition schedule">
 						<article class="card">
 							<h3>June 14-22</h3>
 							<p>
@@ -124,22 +275,22 @@
 								Stone and Leaf Trail series, Greenfield Sculpture Walk.
 							</p>
 						</article>
-					</div>
-				</div>
+					</section>
+				</article>
 			</section>
 
 			<section id="contact" class="section full-height">
-				<div class="section-inner contact">
-					<div class="contact-content">
-						<div class="kicker">Contact</div>
+				<article class="section-inner contact">
+					<header class="contact-content">
+						<p class="kicker">Contact</p>
 						<h2>Interested in a site-specific installation?</h2>
 						<p>
 							Commissions are available for gardens, retreats, cultural events,
 							and environmental programs.
 						</p>
-					</div>
+					</header>
 					<a href="mailto:hello@earthboundforms.com">hello@earthboundforms.com</a>
-				</div>
+				</article>
 			</section>
 		</main>
 
